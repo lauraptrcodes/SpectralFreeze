@@ -46,6 +46,7 @@ SpectralFreezeAudioProcessorEditor::SpectralFreezeAudioProcessorEditor (Spectral
 
     bandCountAttachement.reset(new juce::AudioProcessorValueTreeState::ComboBoxAttachment(valueTreeState, "bandCount", bandCountDropDown));
     bandCountDropDown.addItemList(juce::StringArray{"1", "8", "16", "32", "64" }, 1);
+    bandCountDropDown.setSelectedItemIndex(1);
     addAndMakeVisible(bandCountDropDown);
 
     delayModeDropDown.addItem("linear", 1);
